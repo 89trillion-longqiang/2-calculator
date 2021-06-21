@@ -1,7 +1,6 @@
 #计算器
 
 #整体框架
-
 ```
 使用Gin框架完成一个接口：请求参数一个字符串，包含正整数、加(+)、减(-)、
 乘(*)、除(/)的算数表达式(括号除外)，返回表达式的计算结果。表达式仅包含
@@ -9,7 +8,22 @@
 ```
 
 #目录结构
-
+```
+├── PreTest                             #压力测试
+│   ├── calculator.py
+│   └── report_calculator.html
+├── README.md                           #介绍
+├── calculator_test.go                  #单元测试
+├── go.mod
+├── handle                              #处理router的请求
+│   ├── handle.go
+│   └── routerCtrl.go
+├── main.go                             #代码入口
+├── router                              #路由转发
+│   └── router.go
+└── service                             #处理计算器逻辑
+    └── cal.go
+```
 
 
 #代码逻辑分层  calculator
@@ -49,4 +63,9 @@ exp 类型 string 输入需要一个字符串包含正整数、加(+)、减(-)�
   "condition":"error",
   "result":"exp error"
 }
+```
+
+#第三方库
+```
+github.com/gin-gonic/gin  开发框架
 ```
